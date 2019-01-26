@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<head>
+	<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css">
+	<style>
+		img {
+			width: 45px;
+			height: 45px;
+		}
+	</style>
+</head>
+<body>
+
+	<p id="MDN">MDN Notes:</p>
+
+	<p id="links">
+	<a href="HTML">HTML</a><img src="{% static 'img/html.png' %}" class="img-responsive" />
+	<a href="CSS">CSS</a><img src="{% static 'img/css.png' %}" class="img-responsive" />
+	<a href="JavaScript">JavaScript</a><img src="{% static 'img/js.png' %}" class="img-responsive" />
+	</p>
+
+
+	<h1>JavaScript Examples:</h1>
+
+	<br/>
+	<br/>
+
+	<button class="machine">Start machine</button>
+	<p id="machine-text" class="machine">The machine is stopped.</p>
+
+	<br/>
+	<br/>
+	<br/>
+
+	<p id="name">Player 1: Name</p>
+
+	<script src="{% static 'js/script.js' %}" type="text/javascript"></script>
+</body>
+</html>

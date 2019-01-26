@@ -1,0 +1,558 @@
+
+
+<!--   Datepicker     Inline   -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Datepicker - Display inline</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#datepicker" ).datepicker();
+  } );
+  </script>
+</head>
+<body>
+
+Date: <div id="datepicker"></div>
+
+
+</body>
+</html>
+
+
+
+
+<!--  Widget Buttons  CSS Buttons   Default  -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Button - Default functionality</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( ".widget input[type=submit], .widget a, .widget button" ).button();
+    $( "button, input, a" ).click( function( event ) {
+      event.preventDefault();
+    } );
+  } );
+  </script>
+</head>
+<body>
+<div class="widget">
+  <h1>Widget Buttons</h1>
+  <button>A button element</button>
+
+  <input type="submit" value="A submit button">
+
+  <a href="#">An anchor</a>
+</div>
+<h1>CSS Buttons</h1>
+<button class="ui-button ui-widget ui-corner-all">A button element</button>
+
+<input class="ui-button ui-widget ui-corner-all" type="submit" value="A submit button">
+
+<a class="ui-button ui-widget ui-corner-all" href="#">An anchor</a>
+
+
+</body>
+</html>
+
+
+
+
+<!--  Widget Buttons  CSS Buttons   With Icons -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Button - Icons</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( ".widget button" )
+      .eq( 0 ).button()
+      .end().eq( 1 ).button( {
+        icon: "ui-icon-gear",
+        showLabel: false
+      } ).end().eq( 2 ).button( {
+        icon: "ui-icon-gear"
+      } ).end().eq( 3 ).button( {
+        icon: "ui-icon-gear",
+        iconPosition: "end"
+      } ).end().eq( 4 ).button( {
+        icon: "ui-icon-gear",
+        iconPosition: "top"
+      } ).end().eq( 5 ).button( {
+        icon: "ui-icon-gear",
+        iconPosition: "bottom"
+      } );
+  } );
+  </script>
+</head>
+<body>
+<div class="widget">
+  <h1>Widget</h1>
+  <button>Button with only text</button>
+  <button>Button with icon only</button>
+  <button>Button with icon on the left</button>
+  <button>Button with icon on the right</button>
+  <button>Button with icon on the top</button>
+  <button>Button with icon on the bottom</button>
+</div>
+<div class="css">
+  <h1>CSS</h1>
+  <button class="ui-button ui-widget ui-corner-all">
+    Button with only text
+  </button>
+  <button class="ui-button ui-widget ui-corner-all ui-button-icon-only" title="Button with icon only">
+    <span class="ui-icon ui-icon-gear"></span> Button with icon only
+  </button>
+  <button class="ui-button ui-widget ui-corner-all">
+    <span class="ui-icon ui-icon-gear"></span> Button with icon on the left
+  </button>
+  <button class="ui-button ui-widget ui-corner-all">
+    Button with icon on the right <span class="ui-icon ui-icon-gear"></span>
+  </button>
+  <button class="ui-button ui-widget ui-corner-all">
+    <span class="ui-icon ui-icon-gear ui-widget-icon-block"></span> Button with icon on the top
+  </button>
+  <button class="ui-button ui-widget ui-corner-all">
+    Button with icon on the bottom <span class="ui-icon ui-icon-gear ui-widget-icon-block"></span>
+  </button>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+<!--   Dialog   Animation   -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Dialog - Animation</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#dialog" ).dialog({
+      autoOpen: false,
+      show: {
+        effect: "blind",
+        duration: 1000
+      },
+      hide: {
+        effect: "explode",
+        duration: 1000
+      }
+    });
+
+    $( "#opener" ).on( "click", function() {
+      $( "#dialog" ).dialog( "open" );
+    });
+  } );
+  </script>
+</head>
+<body>
+
+<div id="dialog" title="Basic dialog">
+  <p>This is an animated dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
+</div>
+
+<button id="opener">Open Dialog</button>
+
+
+</body>
+</html>
+
+
+
+
+
+<!--   Dialog    Modal    Form   -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Dialog - Modal form</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <style>
+    label, input { display:block; }
+    input.text { margin-bottom:12px; width:95%; padding: .4em; }
+    fieldset { padding:0; border:0; margin-top:25px; }
+    h1 { font-size: 1.2em; margin: .6em 0; }
+    div#users-contain { width: 350px; margin: 20px 0; }
+    div#users-contain table { margin: 1em 0; border-collapse: collapse; width: 100%; }
+    div#users-contain table td, div#users-contain table th { border: 1px solid #eee; padding: .6em 10px; text-align: left; }
+    .ui-dialog .ui-state-error { padding: .3em; }
+    .validateTips { border: 1px solid transparent; padding: 0.3em; }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    var dialog, form,
+
+      // From http://www.whatwg.org/specs/web-apps/current-work/multipage/states-of-the-type-attribute.html#e-mail-state-%28type=email%29
+      emailRegex = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/,
+      name = $( "#name" ),
+      email = $( "#email" ),
+      password = $( "#password" ),
+      allFields = $( [] ).add( name ).add( email ).add( password ),
+      tips = $( ".validateTips" );
+
+    function updateTips( t ) {
+      tips
+        .text( t )
+        .addClass( "ui-state-highlight" );
+      setTimeout(function() {
+        tips.removeClass( "ui-state-highlight", 1500 );
+      }, 500 );
+    }
+
+    function checkLength( o, n, min, max ) {
+      if ( o.val().length > max || o.val().length < min ) {
+        o.addClass( "ui-state-error" );
+        updateTips( "Length of " + n + " must be between " +
+          min + " and " + max + "." );
+        return false;
+      } else {
+        return true;
+      }
+    }
+
+    function checkRegexp( o, regexp, n ) {
+      if ( !( regexp.test( o.val() ) ) ) {
+        o.addClass( "ui-state-error" );
+        updateTips( n );
+        return false;
+      } else {
+        return true;
+      }
+    }
+
+    function addUser() {
+      var valid = true;
+      allFields.removeClass( "ui-state-error" );
+
+      valid = valid && checkLength( name, "username", 3, 16 );
+      valid = valid && checkLength( email, "email", 6, 80 );
+      valid = valid && checkLength( password, "password", 5, 16 );
+
+      valid = valid && checkRegexp( name, /^[a-z]([0-9a-z_\s])+$/i, "Username may consist of a-z, 0-9, underscores, spaces and must begin with a letter." );
+      valid = valid && checkRegexp( email, emailRegex, "eg. ui@jquery.com" );
+      valid = valid && checkRegexp( password, /^([0-9a-zA-Z])+$/, "Password field only allow : a-z 0-9" );
+
+      if ( valid ) {
+        $( "#users tbody" ).append( "<tr>" +
+          "<td>" + name.val() + "</td>" +
+          "<td>" + email.val() + "</td>" +
+          "<td>" + password.val() + "</td>" +
+        "</tr>" );
+        dialog.dialog( "close" );
+      }
+      return valid;
+    }
+
+    dialog = $( "#dialog-form" ).dialog({
+      autoOpen: false,
+      height: 400,
+      width: 350,
+      modal: true,
+      buttons: {
+        "Create an account": addUser,
+        Cancel: function() {
+          dialog.dialog( "close" );
+        }
+      },
+      close: function() {
+        form[ 0 ].reset();
+        allFields.removeClass( "ui-state-error" );
+      }
+    });
+
+    form = dialog.find( "form" ).on( "submit", function( event ) {
+      event.preventDefault();
+      addUser();
+    });
+
+    $( "#create-user" ).button().on( "click", function() {
+      dialog.dialog( "open" );
+    });
+  } );
+  </script>
+</head>
+<body>
+
+<div id="dialog-form" title="Create new user">
+  <p class="validateTips">All form fields are required.</p>
+
+  <form>
+    <fieldset>
+      <label for="name">Name</label>
+      <input type="text" name="name" id="name" value="Jane Smith" class="text ui-widget-content ui-corner-all">
+      <label for="email">Email</label>
+      <input type="text" name="email" id="email" value="jane@smith.com" class="text ui-widget-content ui-corner-all">
+      <label for="password">Password</label>
+      <input type="password" name="password" id="password" value="xxxxxxx" class="text ui-widget-content ui-corner-all">
+
+      <!-- Allow form submission with keyboard without duplicating the dialog button -->
+      <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+    </fieldset>
+  </form>
+</div>
+
+
+<div id="users-contain" class="ui-widget">
+  <h1>Existing Users:</h1>
+  <table id="users" class="ui-widget ui-widget-content">
+    <thead>
+      <tr class="ui-widget-header ">
+        <th>Name</th>
+        <th>Email</th>
+        <th>Password</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John Doe</td>
+        <td>john.doe@example.com</td>
+        <td>johndoe1</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<button id="create-user">Create new user</button>
+
+
+</body>
+</html>
+
+
+
+
+
+<!--   Dialog     Modal   Confirmation  -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Dialog - Modal confirmation</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#dialog-confirm" ).dialog({
+      resizable: false,
+      height: "auto",
+      width: 400,
+      modal: true,
+      buttons: {
+        "Delete all items": function() {
+          $( this ).dialog( "close" );
+        },
+        Cancel: function() {
+          $( this ).dialog( "close" );
+        }
+      }
+    });
+  } );
+  </script>
+</head>
+<body>
+
+<div id="dialog-confirm" title="Empty the recycle bin?">
+  <p><span class="ui-icon ui-icon-alert" style="float:left; margin:12px 12px 20px 0;"></span>These items will be permanently deleted and cannot be recovered. Are you sure?</p>
+</div>
+
+<p>Sed vel diam id libero <a href="http://example.com">rutrum convallis</a>. Donec aliquet leo vel magna. Phasellus rhoncus faucibus ante. Etiam bibendum, enim faucibus aliquet rhoncus, arcu felis ultricies neque, sit amet auctor elit eros a lectus.</p>
+
+
+</body>
+</html>
+
+
+
+<!--   Dialog    Modal    Message   -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Dialog - Modal message</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#dialog-message" ).dialog({
+      modal: true,
+      buttons: {
+        Ok: function() {
+          $( this ).dialog( "close" );
+        }
+      }
+    });
+  } );
+  </script>
+</head>
+<body>
+
+<div id="dialog-message" title="Download complete">
+  <p>
+    <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span>
+    Your files have downloaded successfully into the My Downloads folder.
+  </p>
+  <p>
+    Currently using <b>36% of your storage space</b>.
+  </p>
+</div>
+
+<p>Sed vel diam id libero <a href="http://example.com">rutrum convallis</a>. Donec aliquet leo vel magna. Phasellus rhoncus faucibus ante. Etiam bibendum, enim faucibus aliquet rhoncus, arcu felis ultricies neque, sit amet auctor elit eros a lectus.</p>
+
+
+</body>
+</html>
+
+
+
+
+<!--   Dialog    Default   -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Dialog - Default functionality</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#dialog" ).dialog();
+  } );
+  </script>
+</head>
+<body>
+
+<div id="dialog" title="Basic dialog">
+  <p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
+</div>
+
+
+</body>
+</html>
+
+
+<!--    -->
+
+
+
+
+
+
+<!--    -->
+
+
+
+
+
+<!--    -->
+
+
+
+
+
+<!--    -->
+
+
+
+
+
+
+<!--    -->
+
+
+
+
+
+<!--    -->
+
+
+
+
+
+<!--    -->
+
+
+
+
+
+
+<!--    -->
+
+
+
+
+
+<!--    -->
+
+
+
+
+
+<!--    -->
+
+
+
+
+
+
+<!--    -->
+
+
+
+
+
+<!--    -->
+
+
+
+
+
+<!--    -->
+
+
+
+
+
+
+<!--    -->

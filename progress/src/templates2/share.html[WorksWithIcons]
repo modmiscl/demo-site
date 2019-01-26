@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+
+{{ ref_id }}<br/>
+
+{{ count }}<br/>
+
+{{ ref_url }}<br/>
+
+
+<div class="icons">
+	<i class="fa fa-facebook-square"></i>
+	<i class="fa fa-twitter-square"></i>
+	<i class="fa fa-linkedin-square"></i>
+	<i class="fa fa-reddit-square"></i>
+	<i class="fa fa-google+-square"></i>
+</div>
+
+ 
+{% endblock %}

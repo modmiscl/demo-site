@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+{% block head %}{% endblock %}
+<title>{% block title %}Blocks{% endblock %}</title>
+<link href="{% block css %}{% endblock %}" rel="stylesheet" />
+{% block cdn_head %}{% endblock %}
+{% block bootstrap_head %}{% endblock %}
+</head>
+<body>
+
+{% block notes %}{% endblock %}
+
+{% block navbar %}{% endblock %}
+
+{% block sidebar %}{% endblock %}
+
+{% block content %}{% endblock %}
+
+{% block footer %}{% endblock %}
+
+<script src="{% block js %}{% endblock %}"></script>
+{% block cdn_body %}{% endblock %}
+{% block bootstrap_body %}{% endblock %}
+</body>
+</html>
