@@ -140,5 +140,8 @@ BRAINTREE_PRIVATE_KEY = "5507587264ea632357cad014f69ed78f"
 SHARE_URL = "https://strawberry5.herokuapp.com/?ref="
 
 
-
+…
+# Configure Django App for Heroku.
+import django_heroku
+django_heroku.settings(locals())
 
